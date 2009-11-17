@@ -1,0 +1,21 @@
+#summary Describe the API used in this binding
+#labels Featured,Phase-Implementation
+
+= Introduction =
+
+The Sony PlaceEngine (PE) API can be found at : [http://www.placeengine.com/doce/tutl] Here.
+
+This binding provides two types of interfaces to the Sony PE API:
+1. Direct - These typically return a string, which is exactly the result from the PE
+2. Parsed - These accept pass-by-reference arguments in native pascal types, and return an integer indicating the error code.
+
+There are also other utility functions that don't directly correspond to the PE API, but are useful for manipulating the data.
+
+= Details =
+
+Note that to use any of the PE APIs, you must obtain an Application Key, which can be retrieved for free from:
+[http://www.placeengine.com/appk/indexe] Here.
+
+The peAppkSet function should be called before any other functions to set the Application Key.  Note that this function does not actually contact the Local or Remote PlaceEngine Server, it merely sets the string to be used for future API calls.
+
+The peTest function should also be called before calling any other functions that return data from the server.  The peTest will return a version string if the PlaceEngine daemon is running.  If the daemon is not running, then it can't be accessed, and none of the other functions will work. 
