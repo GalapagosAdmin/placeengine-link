@@ -1,0 +1,11 @@
+#summary Migration of JSON support functions to separate unit.
+#labels Featured,Phase-Design
+
+= Introduction =
+
+Some of the PlaceEngine API calls return data in a format called JavaScript Object Notation (JSON).  In the development of the PlaceEngine binding code, I wrote some helper functions to decode this data into native ObjectPascal TStringList objects.  Since these functions aren't in any way specific to PlaceEngine, and in fact might be needed in other web API bindings, I decided to move them into a separate unit.  That unit will be available on Google Code shortly.
+
+
+= Details =
+
+The prior implementation of the calls moved to the JSON library are still available in the current source code, just commented out.  (Old comments are, however, periodically deleted).
