@@ -9,3 +9,7 @@ Some of the PlaceEngine API calls return data in a format called JavaScript Obje
 = Details =
 
 The prior implementation of the calls moved to the JSON library are still available in the current source code, just commented out.  (Old comments are, however, periodically deleted).
+
+= New Library =
+The new JSON Decoder library can be found at:
+http://code.google.com/p/json-fpk/
